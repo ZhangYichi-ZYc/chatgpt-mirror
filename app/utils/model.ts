@@ -10,15 +10,15 @@ export function collectModelTable(
       available: boolean;
       name: string;
       displayName: string;
+      provider?: LLMModel["provider"]; // Marked as optional
     }
   > = {};
 
   // default models
   models.forEach((m) => {
     modelTable[m.name] = {
-      available: m.available, // Assuming 'available' is a property of LLMModel
-      name: m.name,
-      displayName: m.name,
+      ...m,
+      displayName: m.name, // 'provider' is copied over if it exists
     };
   });
 
@@ -40,7 +40,7 @@ export function collectModelTable(
           name,
           displayName: displayName || name,
           available,
-          // 'provider' is not included anymore
+          provider: modelTable[name]?.provider, // Use optional chaining
         };
       }
     });
