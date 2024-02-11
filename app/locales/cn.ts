@@ -156,8 +156,8 @@ const cn = {
       SubTitle: "强制给每次请求的消息列表开头添加一个模拟 ChatGPT 的系统提示",
     },
     InputTemplate: {
-      Title: "用户输入预处理",
-      SubTitle: "用户最新的一条消息会填充到此模板",
+      Title: "输入预处理",
+      SubTitle: "最新的一条消息会填充到此模板",
     },
 
     Update: {
