@@ -7,8 +7,8 @@ const cn = {
   WIP: "该功能仍在开发中……",
   Error: {
     Unauthorized: isApp
-      ? "访问密码或API Key无效，请前往[登录](/#/auth)或[设置](/#/settings)页填入正确的凭据。"
-      : "访问密码或API Key无效，请前往[登录](/#/auth)或[设置](/#/settings)页填入正确的凭据。",
+      ? "登陆凭证无效，请前往[登录](/#/auth)或[设置](/#/settings)页填入正确的凭证。"
+      : "登陆凭证无效，请前往[登录](/#/auth)或[设置](/#/settings)页填入正确的凭证。",
   },
   Auth: {
     Title: "访问受限",
