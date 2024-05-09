@@ -263,8 +263,8 @@ const cn = {
     Usage: {
       Title: "余额查询",
       SubTitle(used: any, total: any) {
-        let usedNum = Number(used) / 90000;
-        let totalNum = Number(total) / 90000;
+        let usedNum = Number(used);
+        let totalNum = Number(total);
         let remaining = totalNum - usedNum;
         return `已购￥${totalNum.toFixed(2)}，已用￥${usedNum.toFixed(2)}，剩余￥${remaining.toFixed(2)}`;
       },
