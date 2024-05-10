@@ -291,7 +291,7 @@ const cn = {
         ApiKey: {
           Title: "API Key",
           SubTitle: "使用API Key以访问GPT4系列模型",
-          Placeholder: "ak-xxxxxxx",
+          Placeholder: "sk-xxxxxxx",
         },
 
         Endpoint: {
