@@ -101,7 +101,7 @@ function getSummarizeModel(currentModel: string) {
     );
     return summarizeModel?.name ?? currentModel;
   }
-  if (currentModel.startsWith("gemini")) {
+  if (currentModel.startsWith("zycgemini")) {
     return GEMINI_SUMMARIZE_MODEL;
   }
   return currentModel;
@@ -364,7 +364,7 @@ export const useChatStore = createPersistStore(
         });
 
         var api: ClientApi;
-        if (modelConfig.model.startsWith("gemini")) {
+        if (modelConfig.model.startsWith("zycgemini")) {
           api = new ClientApi(ModelProvider.GeminiPro);
         } else if (identifyDefaultClaudeModel(modelConfig.model)) {
           api = new ClientApi(ModelProvider.Claude);
@@ -550,7 +550,7 @@ export const useChatStore = createPersistStore(
         const modelConfig = session.mask.modelConfig;
 
         var api: ClientApi;
-        if (modelConfig.model.startsWith("gemini")) {
+        if (modelConfig.model.startsWith("zycgemini")) {
           api = new ClientApi(ModelProvider.GeminiPro);
         } else if (identifyDefaultClaudeModel(modelConfig.model)) {
           api = new ClientApi(ModelProvider.Claude);
