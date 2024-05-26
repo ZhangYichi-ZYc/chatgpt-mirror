@@ -138,16 +138,9 @@ const openaiModels = [
   "Gemini 1.5 Flash"
 ];
 
-const googleModels = [
-  "gemini-1.0-pro",
-  "gemini-pro-vision",
-];
+const googleModels: string[] = [];
 
-const anthropicModels = [
-  "claude-instant-1.2",
-  "claude-2.0",
-  "claude-2.1",
-];
+const anthropicModels: string[] = [];
 
 export const DEFAULT_MODELS = [
   ...openaiModels.map((name) => ({
