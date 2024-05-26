@@ -36,7 +36,10 @@ export function Avatar(props: { model?: ModelType; avatar?: string }) {
   if (props.model) {
     return (
       <div className="no-dark">
-        {props.model?.startsWith("gpt-4") ? (
+        {props.model?.startsWith("GPT-4") || 
+        props.model === "Claude 3 Sonnet" || 
+        props.model === "Claude 3 Opus" || 
+        props.model === "Gemini 1.5 Pro" ? (
           <BlackBotIcon className="user-avatar" />
         ) : (
           <BotIcon className="user-avatar" />
