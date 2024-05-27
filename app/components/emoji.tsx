@@ -37,6 +37,7 @@ export function Avatar(props: { model?: ModelType; avatar?: string }) {
     return (
       <div className="no-dark">
         {props.model?.startsWith("GPT 4") || 
+        props.model?.startsWith("gpt-4") || 
         props.model === "Claude 3 Sonnet" || 
         props.model === "Claude 3 Opus" || 
         props.model === "文心一言 4.0" || 
