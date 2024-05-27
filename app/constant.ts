@@ -126,15 +126,19 @@ export const KnowledgeCutOffDate: Record<string, string> = {
 };
 
 const openaiModels = [
-  "GPT-3.5 Turbo",
-  "GPT-4",
-  "GPT-4 Turbo",
-  "GPT-4o",
+  "GPT 3.5 Turbo",
+  "GPT 4",
+  "GPT 4 Turbo",
+  "GPT 4o",
   "Claude 3 Sonnet",
   "Claude 3 Opus",
   "Claude 3 Haiku",
   "Gemini 1.5 Pro",
-  "Gemini 1.5 Flash"
+  "Gemini 1.5 Flash",
+  "通义千问 Turbo",
+  "通义千问 Max",
+  "文心一言 Lite",
+  "文心一言 4.0"
 ];
 
 const googleModels: string[] = [];
