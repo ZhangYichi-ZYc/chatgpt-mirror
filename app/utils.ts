@@ -251,9 +251,9 @@ export function isVisionModel(model: string) {
   // Note: This is a better way using the TypeScript feature instead of `&&` or `||` (ts v5.5.0-dev.20240314 I've been using)
 
   const visionKeywords = [
-    "vision",
-    "claude",
-    "gemini",
+    "GPT 4 Turbo",
+    "Claude",
+    "Gemini",
     "4o",
   ];
   const isGpt4Turbo =
