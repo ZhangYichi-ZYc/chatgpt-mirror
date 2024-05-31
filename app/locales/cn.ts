@@ -32,7 +32,7 @@ const cn = {
     },
     Actions: {
       ChatList: "查看消息列表",
-      CompressedHistory: "查看压缩后的历史 Prompt",
+      CompressedHistory: "查看总结后的历史 Prompt",
       Export: "导出聊天记录",
       Copy: "复制",
       Stop: "停止",
@@ -114,7 +114,7 @@ const cn = {
   Memory: {
     Title: "历史摘要",
     EmptyContent: "对话内容过短，无需总结",
-    Send: "自动压缩聊天记录并作为上下文发送",
+    Send: "自动总结聊天记录并作为上下文发送",
     Copy: "复制摘要",
     Reset: "[unused]",
     ResetConfirm: "确认清空历史摘要？",
@@ -154,7 +154,7 @@ const cn = {
     },
     InjectSystemPrompts: {
       Title: "注入系统级提示信息",
-      SubTitle: "强制给每次请求的消息列表开头添加一个模拟 ChatGPT 的系统提示",
+      SubTitle: "给每次请求的消息列表开头添加系统提示以提高回复质量",
     },
     InputTemplate: {
       Title: "输入预处理",
@@ -256,8 +256,8 @@ const cn = {
       SubTitle: "每次请求携带的历史消息数",
     },
     CompressThreshold: {
-      Title: "历史消息长度压缩阈值",
-      SubTitle: "当未压缩的历史消息超过该值时，将进行压缩",
+      Title: "历史消息长度总结阈值",
+      SubTitle: "当历史消息超过该值时，将进行总结压缩",
     },
 
     Usage: {
@@ -290,7 +290,7 @@ const cn = {
       OpenAI: {
         ApiKey: {
           Title: "API Key",
-          SubTitle: "使用API Key以访问GPT4系列模型",
+          SubTitle: "请输入sk开头的48位API Key",
           Placeholder: "sk-xxxxxxx",
         },
 
