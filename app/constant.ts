@@ -135,10 +135,12 @@ const openaiModels = [
   "Claude 3 Opus",
   "Gemini 1.5 Flash",
   "Gemini 1.5 Pro",
-  "通义千问 Turbo",
+  "通义千问 Long",
   "通义千问 Max",
   "文心一言 Lite",
-  "文心一言 4.0"
+  "文心一言 4.0",
+  "混元 Lite",
+  "混元 Pro"
 ];
 
 const googleModels: string[] = [];

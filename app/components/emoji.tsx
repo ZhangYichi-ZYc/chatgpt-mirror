@@ -42,6 +42,7 @@ export function Avatar(props: { model?: ModelType; avatar?: string }) {
         props.model === "Claude 3 Opus" || 
         props.model === "文心一言 4.0" || 
         props.model === "通义千问 Max" || 
+        props.model === "混元 Pro" || 
         props.model === "Gemini 1.5 Pro" ? (
           <BlackBotIcon className="user-avatar" />
         ) : (
