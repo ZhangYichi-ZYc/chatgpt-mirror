@@ -40,6 +40,10 @@ export function Avatar(props: { model?: ModelType; avatar?: string }) {
         props.model?.startsWith("gpt-4") || 
         props.model === "Claude 3 Sonnet" || 
         props.model === "Claude 3 Opus" || 
+        props.model === "Claude 3.5 Sonnet" || 
+        props.model === "智谱清言" || 
+        props.model === "心理咨询师 Emohaa" || 
+        props.model === "Kimi" || 
         props.model === "文心一言 4.0" || 
         props.model === "通义千问 Max" || 
         props.model === "混元 Pro" || 
