@@ -136,15 +136,14 @@ const openaiModels = [
   "Claude 3.5 Sonnet",
   "Gemini 1.5 Flash",
   "Gemini 1.5 Pro",
-  "Kimi Pro",
+  "Kimi",
   "通义千问 Long",
   "通义千问 Max",
   "文心一言 Speed",
   "文心一言 4.0",
   "混元 Lite",
   "混元 Pro",
-  "智谱清言 Lite",
-  "智谱清言 Pro",
+  "智谱清言",
   "心理咨询师 Emohaa"
 ];
 
@@ -191,6 +190,7 @@ export const internalAllowedWebDavEndpoints = [
   "https://dav.dropdav.com/",
   "https://dav.box.com/dav",
   "https://nanao.teracloud.jp/dav/",
+  "https://bora.teracloud.jp/dav/",
   "https://webdav.4shared.com/",
   "https://dav.idrivesync.com",
   "https://webdav.yandex.com",
