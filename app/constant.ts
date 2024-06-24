@@ -133,6 +133,7 @@ const openaiModels = [
   "Claude 3 Haiku",
   "Claude 3 Sonnet",
   "Claude 3 Opus",
+  "Claude 3.5 Sonnet",
   "Gemini 1.5 Flash",
   "Gemini 1.5 Pro",
   "Kimi Pro",
