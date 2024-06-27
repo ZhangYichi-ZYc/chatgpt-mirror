@@ -50,7 +50,7 @@ export function Avatar(props: { model?: ModelType; avatar?: string }) {
         props.model === "Gemini 1.5 Pro" ? (
           <BlackBotIcon className="user-avatar" />
         ) : (
-          <BotIcon className="user-avatar" />
+          <BlackBotIcon className="user-avatar" />
         )}
       </div>
     );
