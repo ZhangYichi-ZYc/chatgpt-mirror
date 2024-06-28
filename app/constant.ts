@@ -143,10 +143,8 @@ const openaiModels = [
   "文心一言 4.0",
   "混元 Lite",
   "混元 Pro",
-  "豆包 Pro",
-  "豆包 Pro Browsing",
-  "星火 Lite",
-  "星火 4.0 Ultra",
+  "豆包",
+  "星火",
   "智谱清言",
   "心理咨询师 Emohaa"
 ];
