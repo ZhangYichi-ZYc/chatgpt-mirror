@@ -36,19 +36,19 @@ export function Avatar(props: { model?: ModelType; avatar?: string }) {
   if (props.model) {
     return (
       <div className="no-dark">
-        {props.model?.startsWith("GPT 4") || 
-        props.model?.startsWith("gpt-4") || 
-        props.model === "Claude 3 Sonnet" || 
-        props.model === "Claude 3 Opus" || 
-        props.model === "Claude 3.5 Sonnet" || 
+        {props.model?.startsWith("GPT 3.5") || 
+        props.model?.startsWith("gpt-3.5") || 
+        props.model === "Claude 3 Haiku" || 
+        props.model === "Gemini 1.5 Flash" || 
+        props.model === "通义千问 Long" || 
+        props.model === "文心一言 Speed" || 
+        props.model === "混元 Lite" || 
         props.model === "智谱清言" || 
         props.model === "心理咨询师 Emohaa" || 
-        props.model === "Kimi" || 
-        props.model === "文心一言 4.0" || 
-        props.model === "通义千问 Max" || 
-        props.model === "混元 Pro" || 
-        props.model === "Gemini 1.5 Pro" ? (
-          <BlackBotIcon className="user-avatar" />
+        props.model === "星火 Lite" || 
+        props.model === "MiniMax 6.5s" || 
+        props.model === "豆包 Lite" ? (
+          <BotIcon className="user-avatar" />
         ) : (
           <BlackBotIcon className="user-avatar" />
         )}

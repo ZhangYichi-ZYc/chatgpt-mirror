@@ -136,6 +136,8 @@ const openaiModels = [
   "Claude 3.5 Sonnet",
   "Gemini 1.5 Flash",
   "Gemini 1.5 Pro",
+  "MiniMax 6.5",
+  "MiniMax 6.5s",
   "Kimi",
   "通义千问 Long",
   "通义千问 Max",
@@ -143,8 +145,10 @@ const openaiModels = [
   "文心一言 4.0",
   "混元 Lite",
   "混元 Pro",
-  "豆包",
-  "星火",
+  "豆包 Lite",
+  "豆包 Pro",
+  "星火 Lite",
+  "星火 4.0 Ultra",
   "智谱清言",
   "心理咨询师 Emohaa"
 ];
