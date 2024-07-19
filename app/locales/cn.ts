@@ -7,14 +7,14 @@ const cn = {
   WIP: "该功能仍在开发中……",
   Error: {
     Unauthorized: isApp
-      ? "登陆凭证无效，请前往[登录](/#/auth)或[设置](/#/settings)页填入正确的凭证。"
-      : "登陆凭证无效，请前往[登录](/#/auth)或[设置](/#/settings)页填入正确的凭证。",
+      ? "检测到无效 API Key，请前往[设置](/#/settings)页检查 API Key 是否配置正确。"
+      : "访问密码不正确或为空，请前往[登录](/#/auth)页输入正确的访问密码，或者在[设置](/#/settings)页填入你自己的 OpenAI API Key。",
   },
   Auth: {
-    Title: "访问受限",
-    Tips: "请输入访问码",
-    SubTips: "或输入API Key",
-    Input: "访问码",
+    Title: "需要密码",
+    Tips: "管理员开启了密码验证，请在下方填入访问码",
+    SubTips: "或者输入你的 OpenAI 或 Google API 密钥",
+    Input: "在此处填写访问码",
     Confirm: "确认",
     Later: "稍后再说",
   },
@@ -32,7 +32,7 @@ const cn = {
     },
     Actions: {
       ChatList: "查看消息列表",
-      CompressedHistory: "查看总结后的历史 Prompt",
+      CompressedHistory: "查看压缩后的历史 Prompt",
       Export: "导出聊天记录",
       Copy: "复制",
       Stop: "停止",
@@ -114,7 +114,7 @@ const cn = {
   Memory: {
     Title: "历史摘要",
     EmptyContent: "对话内容过短，无需总结",
-    Send: "自动总结聊天记录并作为上下文发送",
+    Send: "自动压缩聊天记录并作为上下文发送",
     Copy: "复制摘要",
     Reset: "[unused]",
     ResetConfirm: "确认清空历史摘要？",
@@ -154,11 +154,11 @@ const cn = {
     },
     InjectSystemPrompts: {
       Title: "注入系统级提示信息",
-      SubTitle: "给每次请求的消息列表开头添加系统提示以提高回复质量",
+      SubTitle: "强制给每次请求的消息列表开头添加一个模拟 ChatGPT 的系统提示",
     },
     InputTemplate: {
-      Title: "输入预处理",
-      SubTitle: "最新的一条消息会填充到此模板",
+      Title: "用户输入预处理",
+      SubTitle: "用户最新的一条消息会填充到此模板",
     },
 
     Update: {
@@ -193,7 +193,7 @@ const cn = {
         },
         SyncType: {
           Title: "同步类型",
-          SubTitle: "指定同步服务器",
+          SubTitle: "选择喜爱的同步服务器",
         },
         Proxy: {
           Title: "启用代理",
@@ -201,7 +201,7 @@ const cn = {
         },
         ProxyUrl: {
           Title: "代理地址",
-          SubTitle: "仅适用于指定跨域代理",
+          SubTitle: "仅适用于本项目自带的跨域代理",
         },
 
         WebDav: {
@@ -256,27 +256,24 @@ const cn = {
       SubTitle: "每次请求携带的历史消息数",
     },
     CompressThreshold: {
-      Title: "历史消息长度总结阈值",
-      SubTitle: "当历史消息超过该值时，将进行总结压缩",
+      Title: "历史消息长度压缩阈值",
+      SubTitle: "当未压缩的历史消息超过该值时，将进行压缩",
     },
 
     Usage: {
       Title: "余额查询",
       SubTitle(used: any, total: any) {
-        let usedNum = Number(used);
-        let totalNum = Number(total);
-        let remaining = totalNum - usedNum;
-        return `已购￥${totalNum.toFixed(2)}，已用￥${usedNum.toFixed(2)}，剩余￥${remaining.toFixed(2)}`;
+        return `本月已使用 $${used}，订阅总额 $${total}`;
       },
       IsChecking: "正在检查…",
       Check: "重新检查",
-      NoAccess: "输入 API Key 查看余额",
+      NoAccess: "输入 API Key 或访问密码查看余额",
     },
 
     Access: {
       AccessCode: {
         Title: "访问密码",
-        SubTitle: "已开启加密访问",
+        SubTitle: "管理员已开启加密访问",
         Placeholder: "请输入访问密码",
       },
       CustomEndpoint: {
@@ -290,8 +287,8 @@ const cn = {
       OpenAI: {
         ApiKey: {
           Title: "API Key",
-          SubTitle: "请输入sk开头的48位API Key",
-          Placeholder: "sk-xxxxxxx",
+          SubTitle: "使用自定义 OpenAI Key 绕过密码访问限制",
+          Placeholder: "OpenAI API Key",
         },
 
         Endpoint: {
@@ -348,6 +345,44 @@ const cn = {
         ApiVersion: {
           Title: "API 版本（仅适用于 gemini-pro）",
           SubTitle: "选择一个特定的 API 版本",
+        },
+      },
+      Baidu: {
+        ApiKey: {
+          Title: "API Key",
+          SubTitle: "使用自定义 Baidu API Key",
+          Placeholder: "Baidu API Key",
+        },
+        SecretKey: {
+          Title: "Secret Key",
+          SubTitle: "使用自定义 Baidu Secret Key",
+          Placeholder: "Baidu Secret Key",
+        },
+        Endpoint: {
+          Title: "接口地址",
+          SubTitle: "不支持自定义前往.env配置",
+        },
+      },
+      ByteDance: {
+        ApiKey: {
+          Title: "接口密钥",
+          SubTitle: "使用自定义 ByteDance API Key",
+          Placeholder: "ByteDance API Key",
+        },
+        Endpoint: {
+          Title: "接口地址",
+          SubTitle: "样例：",
+        },
+      },
+      Alibaba: {
+        ApiKey: {
+          Title: "接口密钥",
+          SubTitle: "使用自定义阿里云API Key",
+          Placeholder: "Alibaba Cloud API Key",
+        },
+        Endpoint: {
+          Title: "接口地址",
+          SubTitle: "样例：",
         },
       },
       CustomModel: {
