@@ -47,6 +47,7 @@ export function Avatar(props: { model?: ModelType; avatar?: string }) {
         props.model === "心理咨询师 Emohaa" || 
         props.model === "星火 Lite" || 
         props.model === "MiniMax 6.5s" || 
+        props.model === "GPT 4o mini" || 
         props.model === "豆包 Lite" ? (
           <BotIcon className="user-avatar" />
         ) : (
