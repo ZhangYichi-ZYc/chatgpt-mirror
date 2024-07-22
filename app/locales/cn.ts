@@ -7,14 +7,14 @@ const cn = {
   WIP: "该功能仍在开发中……",
   Error: {
     Unauthorized: isApp
-      ? "检测到无效 API Key，请前往[设置](/#/settings)页检查 API Key 是否配置正确。"
-      : "访问密码不正确或为空，请前往[登录](/#/auth)页输入正确的访问密码，或者在[设置](/#/settings)页填入你自己的 OpenAI API Key。",
+      ? "登陆凭证无效，请前往[登录](/#/auth)或[设置](/#/settings)页填入正确的凭证。"
+      : "登陆凭证无效，请前往[登录](/#/auth)或[设置](/#/settings)页填入正确的凭证。",
   },
   Auth: {
-    Title: "需要密码",
-    Tips: "管理员开启了密码验证，请在下方填入访问码",
-    SubTips: "或者输入你的 OpenAI 或 Google API 密钥",
-    Input: "在此处填写访问码",
+    Title: "访问受限",
+    Tips: "请输入访问码",
+    SubTips: "或输入API Key",
+    Input: "访问码",
     Confirm: "确认",
     Later: "稍后再说",
   },
@@ -182,7 +182,7 @@ const cn = {
     },
     Sync: {
       CloudState: "云端数据",
-      NotSyncYet: "还没有进行过同步",
+      NotSyncYet: "尚未同步",
       Success: "同步成功",
       Fail: "同步失败",
 
@@ -193,7 +193,7 @@ const cn = {
         },
         SyncType: {
           Title: "同步类型",
-          SubTitle: "选择喜爱的同步服务器",
+          SubTitle: "选择同步服务器",
         },
         Proxy: {
           Title: "启用代理",
@@ -201,7 +201,7 @@ const cn = {
         },
         ProxyUrl: {
           Title: "代理地址",
-          SubTitle: "仅适用于本项目自带的跨域代理",
+          SubTitle: "仅适用于指定跨域代理",
         },
 
         WebDav: {
@@ -263,17 +263,20 @@ const cn = {
     Usage: {
       Title: "余额查询",
       SubTitle(used: any, total: any) {
-        return `本月已使用 $${used}，订阅总额 $${total}`;
+        let usedNum = Number(used);
+        let totalNum = Number(total);
+        let remaining = totalNum - usedNum;
+        return `已购￥${totalNum.toFixed(2)}，已用￥${usedNum.toFixed(2)}，剩余￥${remaining.toFixed(2)}`;
       },
       IsChecking: "正在检查…",
       Check: "重新检查",
-      NoAccess: "输入 API Key 或访问密码查看余额",
+      NoAccess: "输入 API Key 查看余额",
     },
 
     Access: {
       AccessCode: {
         Title: "访问密码",
-        SubTitle: "管理员已开启加密访问",
+        SubTitle: "访问受限",
         Placeholder: "请输入访问密码",
       },
       CustomEndpoint: {
@@ -287,8 +290,8 @@ const cn = {
       OpenAI: {
         ApiKey: {
           Title: "API Key",
-          SubTitle: "使用自定义 OpenAI Key 绕过密码访问限制",
-          Placeholder: "OpenAI API Key",
+          SubTitle: "请输入sk开头的48位API Key（令牌）",
+          Placeholder: "sk-xxxxxxx",
         },
 
         Endpoint: {
