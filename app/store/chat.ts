@@ -90,7 +90,7 @@ function createEmptySession(): ChatSession {
 }
 
 function getSummarizeModel(currentModel: string) {
-  // if it is using gpt-* models, force to use 3.5 to summarize
+  // 始终使用指定的总结模型
   return SUMMARIZE_MODEL;
 }
 
