@@ -248,6 +248,8 @@ const openaiModels = [
   "GPT 4 Turbo",
   "GPT 4o",
   "GPT 4o mini",
+  "OpenAI o1",
+  "OpenAI o1-mini",
   "Claude 3 Haiku",
   "Claude 3 Sonnet",
   "Claude 3 Opus",
