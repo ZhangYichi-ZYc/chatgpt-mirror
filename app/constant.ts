@@ -410,6 +410,6 @@ export const internalAllowedWebDavEndpoints = [
 
 export const DEFAULT_GA_ID = "G-89WN60ZK2E";
 export const PLUGINS = [
-  { name: "Plugins", path: Path.Plugins },
-  { name: "Search Chat", path: Path.SearchChat },
+  { name: "自定义插件集", path: Path.Plugins },
+  { name: "搜索聊天记录", path: Path.SearchChat },
 ];
