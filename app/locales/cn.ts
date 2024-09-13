@@ -549,7 +549,7 @@ const cn = {
       SubTitle: (count: number) => `${count} 个插件`,
       Search: "搜索插件",
       Create: "新建",
-      Find: "您可以在Github上找到优秀的插件：",
+      Find: "您可以从Github寻找优秀插件。",
     },
     Item: {
       Info: (count: number) => `${count} 方法`,
