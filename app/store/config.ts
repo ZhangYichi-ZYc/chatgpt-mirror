@@ -60,6 +60,8 @@ export const DEFAULT_CONFIG = {
     sendMemory: true,
     historyMessageCount: 4,
     compressMessageLengthThreshold: 1000,
+    compressModel: "GPT 4o mini" as ModelType,
+    compressProviderName: "OpenAI" as ServiceProvider,
     enableInjectSystemPrompts: true,
     template: config?.template ?? DEFAULT_INPUT_TEMPLATE,
     size: "1024x1024" as DalleSize,
@@ -140,7 +142,7 @@ export const useAppConfig = createPersistStore(
   }),
   {
     name: StoreKey.Config,
-    version: 3.9,
+    version: 4,
     migrate(persistedState, version) {
       const state = persistedState as ChatConfig;
 
@@ -176,6 +178,13 @@ export const useAppConfig = createPersistStore(
           state.modelConfig.template !== DEFAULT_INPUT_TEMPLATE
             ? state.modelConfig.template
             : config?.template ?? DEFAULT_INPUT_TEMPLATE;
+      }
+
+      if (version < 4) {
+        state.modelConfig.compressModel =
+          DEFAULT_CONFIG.modelConfig.compressModel;
+        state.modelConfig.compressProviderName =
+          DEFAULT_CONFIG.modelConfig.compressProviderName;
       }
 
       return state as any;
