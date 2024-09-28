@@ -256,7 +256,8 @@ export const DEFAULT_TTS_VOICES = [
 ];
 
 const openaiModels = [
-  "gpt-4o-mini"
+  "gpt-4o",
+  "gpt-4o-mini",
 ];
 
 const googleModels: string[] = [];
