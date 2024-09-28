@@ -234,7 +234,7 @@ Latex inline: \\(x^2\\)
 Latex block: $$e=mc^2$$
 `;
 
-export const SUMMARIZE_MODEL = "GPT 4o mini";
+export const SUMMARIZE_MODEL = "gpt-4o-mini";
 export const GEMINI_SUMMARIZE_MODEL = "gemini-pro";
 
 export const KnowledgeCutOffDate: Record<string, string> = {
@@ -256,34 +256,7 @@ export const DEFAULT_TTS_VOICES = [
 ];
 
 const openaiModels = [
-  "GPT 3.5 Turbo",
-  "GPT 4",
-  "GPT 4 Turbo",
-  "GPT 4o",
-  "GPT 4o mini",
-  "OpenAI o1",
-  "OpenAI o1 mini",
-  "Claude 3 Haiku",
-  "Claude 3 Sonnet",
-  "Claude 3 Opus",
-  "Claude 3.5 Sonnet",
-  "Gemini 1.5 Flash",
-  "Gemini 1.5 Pro",
-  "MiniMax 6.5",
-  "MiniMax 6.5s",
-  "Kimi",
-  "通义千问 Long",
-  "通义千问 Max",
-  "文心一言 Speed",
-  "文心一言 4.0",
-  "混元 Lite",
-  "混元 Pro",
-  "豆包 Lite",
-  "豆包 Pro",
-  "星火 Lite",
-  "星火 4.0 Ultra",
-  "智谱清言",
-  "心理咨询师 Emohaa",
+  "gpt-4o-mini"
 ];
 
 const googleModels: string[] = [];

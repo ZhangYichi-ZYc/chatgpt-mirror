@@ -48,7 +48,15 @@ export function Avatar(props: { model?: ModelType; avatar?: string }) {
         props.model === "星火 Lite" || 
         props.model === "MiniMax 6.5s" || 
         props.model === "GPT 4o mini" || 
-        props.model === "豆包 Lite" ? (
+        props.model === "豆包 Lite" || 
+        props.model === "claude-3-haiku-20240307" || 
+        props.model === "gemini-1.5-flash" || 
+        props.model === "qwen-long" || 
+        props.model === "ERNIE-Speed-128K" || 
+        props.model === "hunyuan-Lite" || 
+        props.model === "glm-4-air" || 
+        props.model === "gpt-4o-mini" || 
+        props.model === "emohaa" ? (
           <BotIcon className="user-avatar" />
         ) : (
           <BlackBotIcon className="user-avatar" />
