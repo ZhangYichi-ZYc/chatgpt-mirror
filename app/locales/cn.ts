@@ -292,7 +292,7 @@ const cn = {
         let usedNum = Number(used);
         let totalNum = Number(total);
         let remaining = totalNum - usedNum;
-        return `已购￥${totalNum.toFixed(2)}，已用￥${usedNum.toFixed(2)}，剩余￥${remaining.toFixed(2)}`;
+        return `已购$${totalNum.toFixed(2)}，已用$${usedNum.toFixed(2)}，剩余$${remaining.toFixed(2)}`;
       },
       IsChecking: "正在检查…",
       Check: "重新检查",
