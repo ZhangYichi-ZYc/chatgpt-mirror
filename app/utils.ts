@@ -254,11 +254,11 @@ export function isVisionModel(model: string) {
   // Note: This is a better way using the TypeScript feature instead of `&&` or `||` (ts v5.5.0-dev.20240314 I've been using)
 
   const visionKeywords = [
-    "4 Turbo",
+    "4-turbo",
     "4o",
-    "4o mini",
-    "Claude",
-    "Gemini",
+    "claude",
+    "gemini",
+    "qwen-vl"
   ];
   const isGpt4Turbo =
     model.includes("gpt-4-turbo") && !model.includes("preview");
