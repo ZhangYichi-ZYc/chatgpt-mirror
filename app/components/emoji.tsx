@@ -51,7 +51,10 @@ export function Avatar(props: { model?: ModelType; avatar?: string }) {
         props.model === "豆包 Lite" || 
         props.model === "claude-3-haiku-20240307" || 
         props.model === "gemini-1.5-flash" || 
-        props.model === "qwen-long" || 
+        props.model === "qwen-long" ||  
+        props.model === "qwen-turbo" ||  
+        props.model === "qwen-math-plus" ||  
+        props.model === "qwen-coder-turbo" || 
         props.model === "ERNIE-Speed-128K" || 
         props.model === "hunyuan-Lite" || 
         props.model === "glm-4-air" || 
