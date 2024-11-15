@@ -58,6 +58,7 @@ export function Avatar(props: { model?: ModelType; avatar?: string }) {
         props.model === "ERNIE-Speed-128K" || 
         props.model === "hunyuan-Lite" || 
         props.model === "glm-4-air" || 
+        props.model === "lite" || 
         props.model === "gpt-4o-mini" || 
         props.model === "emohaa" ? (
           <BotIcon className="user-avatar" />
