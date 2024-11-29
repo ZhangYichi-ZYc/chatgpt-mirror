@@ -91,7 +91,7 @@ export function ModelConfigList(props: {
           aria-label={Locale.Settings.MaxTokens.Title}
           type="number"
           min={1024}
-          max={512000}
+          max={4096}
           value={props.modelConfig.max_tokens}
           onChange={(e) =>
             props.updateConfig(
